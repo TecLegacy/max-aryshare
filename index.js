@@ -1,16 +1,17 @@
 const expres = require('express');
 const app = expres();
 const cors = require('cors');
+require('dotenv').config();
 
 app.use(cors());
 
 const SocialPost = require('social-post-api');
-const API_KEY = 'QC9JFAM-8DZM3F1-Q4KMVF5-QW7YQ8W';
+const API_KEY = process.env.ARYSHARE;
 const social = new SocialPost(API_KEY);
 
 const pinterestPostResponse = () => {
   return {
-    post: 'first post :https://www.espn.in/football/story/_/id/38232851/mason-greenwood-leave-man-united-club-investigation',
+    post: 'This is a test Post for Max',
     platforms: ['pinterest'],
     mediaUrls: [
       'https://ik.imagekit.io/hw4mk2vrzim/restaurant_Q_iroK7gxap.jpg?updatedAt=1643227525889',
