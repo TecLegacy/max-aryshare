@@ -1,3 +1,9 @@
+const expres = require('express');
+const app = expres();
+const cors = require('cors');
+
+app.use(cors());
+
 const SocialPost = require('social-post-api');
 const API_KEY = 'QC9JFAM-8DZM3F1-Q4KMVF5-QW7YQ8W';
 const social = new SocialPost(API_KEY);
